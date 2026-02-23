@@ -180,7 +180,7 @@ Redo → pop from future[], push to past[], restore next state
 
 ## 🏛️ Architecture Diagram
 
-<img width="1152" height="1756" alt="mermaid-diagram-2026-02-23-123050" src="https://github.com/user-attachments/assets/9d9e65bb-b4fc-4332-bdb3-7069401ba220" />
+<img width="902" height="1200" alt="mermaid-diagram-2026-02-23-123050" src="https://github.com/user-attachments/assets/9d9e65bb-b4fc-4332-bdb3-7069401ba220" />
 
 
 ---
