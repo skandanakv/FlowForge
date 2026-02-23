@@ -185,20 +185,7 @@ Redo → pop from future[], push to past[], restore next state
 
 ---
 
-## 📋 Rubric Coverage
 
-| Criteria | Implementation |
-|---|---|
-| Architecture & Folder Structure | Feature-based modular structure, separation of engine/UI/state |
-| State Management & Undo/Redo | Zustand with past/future stack, immutable updates |
-| Graph Logic & Validation Engine | hasCycle, topologicalSort, validateWorkflow with 5 rules |
-| Execution Simulation Engine | Topological walk, async step delay, branch skipping |
-| UI/UX Quality & Responsiveness | Dark/light mode, animations, color-coded nodes |
-| Performance Optimization | React.memo on BaseNode and NodeCard |
-| Code Quality | Modular, named functions, consistent naming |
-| Documentation | This README + architecture diagram |
-
----
 
 ## 👤 Author
 
