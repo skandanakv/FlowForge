@@ -8,33 +8,39 @@ Create, configure, validate, simulate, and persist workflows — entirely in the
 ## 📸 Screenshots
 
 ### 1. Empty Canvas — Three Panel Layout
-[placeholder for img — Image 1: empty canvas]  
+<img width="1440" height="900" alt="Screenshot 2026-02-23 at 11 59 05 AM" src="https://github.com/user-attachments/assets/df617313-6120-4201-a5f5-e6e94207bab5" />
+
 > Three-panel layout: Node Library (left), Canvas (center), Properties Panel (right).  
 > Toolbar: **Run** · **Undo** · **Redo** · **Import** · **Clear** · **Export** · **☀️/🌙 Theme Toggle**
 
 ---
 
 ### 2. Drag and Drop Nodes
-[placeholder for img — Image 2: trigger node dropped]  
+ <img width="1438" height="900" alt="Screenshot 2026-02-23 at 11 59 36 AM" src="https://github.com/user-attachments/assets/e813ee6a-1701-4758-9043-26236903bdb7" />
+
 > Drag any node from the left sidebar onto the canvas. Node count updates in real time at the bottom of the sidebar.
 
 ---
 
 ### 3. Full Workflow + Execution Log
-[placeholder for img — Image 3: full workflow running]  
+<img width="1440" height="789" alt="Screenshot 2026-02-23 at 12 02 12 PM" src="https://github.com/user-attachments/assets/7769f5be-041f-4075-9c12-1fc0ad84f9b9" />
+
 > Complete workflow: Trigger → Action → Condition → (Yes) Delay / (No) HTTP Request → End.  
 > Right panel shows live execution log with timestamps, step status, and branch decisions.
 
 ---
 
 ### 4. Node Configuration Panel
-[placeholder for img — Image 4: HTTP request config panel]  
+
+<img width="453" height="418" alt="Screenshot 2026-02-23 at 12 02 39 PM" src="https://github.com/user-attachments/assets/43a648fb-eab5-493c-8c56-2d86369c2b65" />
+
 > Click any node to open its config in the right panel. Edit name, method, URL etc. Changes reflect on the canvas node in real time.
 
 ---
 
 ### 5. Validation Engine
-[placeholder for img — Image 5: validation error panel]  
+<img width="489" height="594" alt="Screenshot 2026-02-23 at 12 03 17 PM" src="https://github.com/user-attachments/assets/83f79c33-5b06-4327-8cea-294387361fbd" />
+
 > Clicking Run before a valid workflow triggers the validation engine. Errors and warnings are displayed before execution begins, blocking invalid runs.
 
 ---
@@ -42,13 +48,13 @@ Create, configure, validate, simulate, and persist workflows — entirely in the
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js v18+
-- npm or yarn
+- Node.js v20+
+- npm 
 
 ### Installation
 ```bash
 git clone https://github.com/skandanakv/FlowForge.git
-cd FlowForge
+cd flowforge
 npm install
 npm run dev
 ```
@@ -72,30 +78,6 @@ npm run preview
 | Zustand | Global state management |
 | Tailwind CSS | Styling |
 | Vite | Build tool |
-
----
-
-## 📁 Folder Structure
-```
-src/
-├── components/
-│   ├── canvas/          # ReactFlow canvas, drag-drop, edge logic
-│   ├── config/          # Right panel — node config forms + execution log
-│   ├── layout/          # Three-panel layout shell
-│   ├── nodes/           # BaseNode + per-type node components
-│   ├── sidebar/         # Left panel — node library
-│   └── simulation/      # ValidationPanel, ExecutionPanel
-├── constants/
-│   └── nodeTypes.js     # NODE_CONFIGS — colors, icons, defaultData per type
-├── engine/
-│   ├── execution/       # executeWorkflow.js — topological sort + simulation
-│   ├── graph/           # graphUtils.js — adjacency list, cycle detection, topoSort
-│   └── validation/      # validateWorkflow.js — all validation rules
-├── store/
-│   └── useWorkflowStore.js  # Zustand store — nodes, edges, undo/redo, theme
-└── utils/
-    └── storage.js       # localStorage save/load, JSON import/export
-```
 
 ---
 
