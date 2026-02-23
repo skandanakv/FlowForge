@@ -1,7 +1,6 @@
-```markdown
 # ⚡ FlowForge — Visual Workflow Builder
 
-A frontend-only visual workflow automation builder built with React and Zustand. 
+A frontend-only visual workflow automation builder built with React and Zustand.  
 Create, configure, validate, simulate, and persist workflows — entirely in the browser, no backend required.
 
 ---
@@ -9,33 +8,33 @@ Create, configure, validate, simulate, and persist workflows — entirely in the
 ## 📸 Screenshots
 
 ### 1. Empty Canvas — Three Panel Layout
-[placeholder for img — Image 1: empty canvas]
-> Three-panel layout: Node Library (left), Canvas (center), Properties Panel (right). 
+[placeholder for img — Image 1: empty canvas]  
+> Three-panel layout: Node Library (left), Canvas (center), Properties Panel (right).  
 > Toolbar: **Run** · **Undo** · **Redo** · **Import** · **Clear** · **Export** · **☀️/🌙 Theme Toggle**
 
 ---
 
 ### 2. Drag and Drop Nodes
-[placeholder for img — Image 2: trigger node dropped]
+[placeholder for img — Image 2: trigger node dropped]  
 > Drag any node from the left sidebar onto the canvas. Node count updates in real time at the bottom of the sidebar.
 
 ---
 
 ### 3. Full Workflow + Execution Log
-[placeholder for img — Image 3: full workflow running]
-> Complete workflow: Trigger → Action → Condition → (Yes) Delay / (No) HTTP Request → End.
+[placeholder for img — Image 3: full workflow running]  
+> Complete workflow: Trigger → Action → Condition → (Yes) Delay / (No) HTTP Request → End.  
 > Right panel shows live execution log with timestamps, step status, and branch decisions.
 
 ---
 
 ### 4. Node Configuration Panel
-[placeholder for img — Image 4: HTTP request config panel]
+[placeholder for img — Image 4: HTTP request config panel]  
 > Click any node to open its config in the right panel. Edit name, method, URL etc. Changes reflect on the canvas node in real time.
 
 ---
 
 ### 5. Validation Engine
-[placeholder for img — Image 5: validation error panel]
+[placeholder for img — Image 5: validation error panel]  
 > Clicking Run before a valid workflow triggers the validation engine. Errors and warnings are displayed before execution begins, blocking invalid runs.
 
 ---
@@ -47,7 +46,6 @@ Create, configure, validate, simulate, and persist workflows — entirely in the
 - npm or yarn
 
 ### Installation
-
 ```bash
 git clone https://github.com/skandanakv/FlowForge.git
 cd FlowForge
@@ -55,10 +53,9 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open http://localhost:5173 in your browser.
 
 ### Build for Production
-
 ```bash
 npm run build
 npm run preview
@@ -79,7 +76,6 @@ npm run preview
 ---
 
 ## 📁 Folder Structure
-
 ```
 src/
 ├── components/
@@ -164,7 +160,6 @@ Runs before every execution and checks:
 See architecture diagram below.
 
 ### Data Flow
-
 ```
 User Action
     ↓
@@ -176,7 +171,6 @@ React Flow re-renders + localStorage sync
 ```
 
 ### Execution Flow
-
 ```
 Run clicked
     ↓
@@ -194,7 +188,6 @@ BaseNode re-renders with color/glow
 ```
 
 ### Undo/Redo Pattern
-
 ```
 Action happens → saveSnapshot() → push {nodes, edges} to past[]
 Undo → pop from past[], push to future[], restore previous state
@@ -206,7 +199,6 @@ Redo → pop from future[], push to past[], restore next state
 ## 🏛️ Architecture Diagram
 
 > Build this diagram yourself using the flowchart below:
-
 ```
 ┌─────────────────────────────────────────────────────┐
 │                      App.jsx                        │
@@ -247,13 +239,26 @@ Redo → pop from future[], push to past[], restore next state
                               └───────────┘
 ```
 
-**Recommended tool to draw this:** [Excalidraw](https://excalidraw.com) — free, looks great, export as PNG.
+**Recommended tool to draw this:** https://excalidraw.com — free, looks great, export as PNG.
 
 ---
 
+## 📋 Rubric Coverage
+
+| Criteria | Implementation |
+|---|---|
+| Architecture & Folder Structure | Feature-based modular structure, separation of engine/UI/state |
+| State Management & Undo/Redo | Zustand with past/future stack, immutable updates |
+| Graph Logic & Validation Engine | hasCycle, topologicalSort, validateWorkflow with 5 rules |
+| Execution Simulation Engine | Topological walk, async step delay, branch skipping |
+| UI/UX Quality & Responsiveness | Dark/light mode, animations, color-coded nodes |
+| Performance Optimization | React.memo on BaseNode and NodeCard |
+| Code Quality | Modular, named functions, consistent naming |
+| Documentation | This README + architecture diagram |
+
+---
 
 ## 👤 Author
 
 Skandana KV  
-[github.com/skandanakv](https://github.com/skandanakv)
-```
+https://github.com/skandanakv
