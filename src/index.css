@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+}
+
+.react-flow__controls {
+  background: #1c2128 !important;
+  border: 1px solid #30363d !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: #1c2128 !important;
+  border-bottom: 1px solid #30363d !important;
+  fill: #8b949e !important;
+}
+
+.react-flow__controls-button:hover {
+  background: #30363d !important;
+}
+
+.react-flow__minimap {
+  border: 1px solid #30363d !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+
+.react-flow__edge-path {
+  stroke: #4f8ef7 !important;
+  stroke-width: 2 !important;
+}
